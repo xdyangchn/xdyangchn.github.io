@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          
+          spring-data-jpa 报错：Parameter value element [null] did not match expected type [java.lang.String (n/a - null
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/">
+    <link rel="canonical" href="http://yoursite.com/2019/05/22/spring-data-jpa-报错：Parameter-value-element-null-did-not-match-expected-type-java-lang-String-n-a/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -101,13 +101,21 @@
 			
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
                 
-				
-                    <div class="site-heading" style="padding:40px">
-                        <h1>xdyang&#39;s blog</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading"></span>
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#springboot" title="springboot">springboot</a>
+                            
+                              <a class="tag" href="/tags/#jpa" title="jpa">jpa</a>
+                            
+                        </div>
+                        <h1>spring-data-jpa 报错：Parameter value element [null] did not match expected type [java.lang.String (n/a</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xdyangchn@163.com on
+                            2019-05-22
+                        </span>
                     </div>
-                
                 
                 </div>
             </div>
@@ -183,299 +191,134 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <!-- Main Content -->
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
+                <h1 id="spring-data-jpa-报错：Parameter-value-element-null-did-not-match-expected-type-java-lang-String-n-a"><a href="#spring-data-jpa-报错：Parameter-value-element-null-did-not-match-expected-type-java-lang-String-n-a" class="headerlink" title="(spring-data-jpa 报错：Parameter value element [null] did not match expected type [java.lang.String (n/a)])"></a>(spring-data-jpa 报错：Parameter value element [null] did not match expected type [java.lang.String (n/a)])</h1><h2 id="报错如下："><a href="#报错如下：" class="headerlink" title="报错如下："></a>报错如下：</h2><p><img src="https://img-blog.csdnimg.cn/20181130221551165.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyMDI5NjA1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">代码中使用了 in 查询：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;OrderMasterExpense&gt; findByBuyerOpenidInAndTypeAndUpdateTimeBetween(List&lt;String&gt; buyerOpenidList, Integer type, Date beginDate, Date endDate);</span><br></pre></td></tr></table></figure></p>
+<p>注意：上面方法第一个参数的类型为 <code>List&lt;String&gt;</code><br><strong>造成报错的根本原因在于：调用该方法时传入的第一个参数 buyerOpenidList 中含有 null 值, 过滤掉 null 值后再次测试，未出现问题。</strong></p>
 
-
-
-<div class="post-preview">
-
-    <a href="/2019/05/22/IDEA-2019-激活码/">
-        <h2 class="post-title">
-            IDEA 2019 激活码
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-             1. 复制以下激活码156ZS5PQ1RF-eyJsaWNlbnNlSWQiOiI1NlpTNVBRMVJGIiwibGljZW5zZWVOYW1lIjoi5q2j54mI5o6I5p2DIC4iLCJhc3NpZ25lZU5hbWUiOiIiLCJhc3NpZ25lZUVtYWlsIjoiIiwibGljZW5zZVJlc3RyaWN0aW9uIjoiRm9yIGVkdWNhdGlvbm......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by xdyangchn@163.com on
-            2019-05-22
-        </p>
-    
-
-</div>
-<hr>
-
-
-<div class="post-preview">
-
-    <a href="/2019/05/22/根据地址获取邮编工具类/">
-        <h2 class="post-title">
-            根据地址获取邮编工具类
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            1234567891011121314151617181920212223242526272829303132333435363738394041424344454647import com.alibaba.fastjson.JSON;import com.alibaba.fastjson.JSONObject;import lombok.extern.slf4j.Slf4j;import ......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by xdyangchn@163.com on
-            2019-05-22
-        </p>
-    
-
-</div>
-<hr>
-
-
-<div class="post-preview">
-
-    <a href="/2019/05/22/spring-boot-报错-expected-to-be-of-type-xxService-but-was-actually-of-type-com-sun-proxy-Proxy48/">
-        <h2 class="post-title">
-            spring boot 报错 : expected to be of type 'xxService' but was actually of type 'com.sun.proxy.$Proxy48
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            spring boot 项目运行报错：1Caused by: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named &apos;xxService&apos; is expected to be of type &apos;com.yangxd.application.service.xxSe......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by xdyangchn@163.com on
-            2019-05-22
-        </p>
-    
-
-</div>
-<hr>
-
-
-<div class="post-preview">
-
-    <a href="/2019/05/22/IntelliJ-IDEA-2018-3-启动黑屏无响应/">
-        <h2 class="post-title">
-            IntelliJ IDEA 2018.3 启动黑屏无响应
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            在此之前，为了方便调试堆内存写死并加入了日志的打印、以及内存溢出后的堆转储快照。
--Xms64m
--Xmx64m
--XX:+PrintHeapAtGC
--XX:+HeapDumpOnOutOfMemoryError
-google 一下 “ idea 启动黑屏” 并未找到解决方案，然后觉得可能是姿势不对，于是再次 google “idea 启动失败” 找到了一些文章，文中都是通过改 jvm 参......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by xdyangchn@163.com on
-            2019-05-22
-        </p>
-    
-
-</div>
-<hr>
-
-
-<div class="post-preview">
-
-    <a href="/2019/05/22/spring-data-jpa-报错：Parameter-value-element-null-did-not-match-expected-type-java-lang-String-n-a/">
-        <h2 class="post-title">
-            spring-data-jpa 报错：Parameter value element [null] did not match expected type [java.lang.String (n/a
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            (spring-data-jpa 报错：Parameter value element [null] did not match expected type [java.lang.String (n/a)])报错如下：代码中使用了 in 查询：1List&lt;OrderMasterExpense&gt; findByBuyerOpenidInAndTypeAndUpdateTimeBetw......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by xdyangchn@163.com on
-            2019-05-22
-        </p>
-    
-
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-
-
-
-                <!-- 如果开启评论功能 -->
                 
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/05/22/IntelliJ-IDEA-2018-3-启动黑屏无响应/" data-toggle="tooltip" data-placement="top" title="IntelliJ IDEA 2018.3 启动黑屏无响应">&larr; Previous post</a>
+                        </li>
+                    
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share" data-wechat-qrcode-helper align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
             </div>
 
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">Tags</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/#IDEA" title="IDEA" rel="2">IDEA</a>
-            
-        
-            
-            <a href="/tags/#工具" title="工具" rel="1">工具</a>
-            
-        
-            
-            <a href="/tags/#java" title="java" rel="1">java</a>
-            
-        
-            
-            <a href="/tags/#springboot" title="springboot" rel="2">springboot</a>
-            
-        
-            
-            <a href="/tags/#jpa" title="jpa" rel="1">jpa</a>
-            
-        
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">Tags</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#springboot" title="springboot">springboot</a>
+                        
+                          <a class="tag" href="/tags/#jpa" title="jpa">jpa</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
     </div>
-</section>
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">About me</a></h5>
-    <div class="short-about">
-
-        
-            <img id="avatar_pic" src="/img/avatar/logo.png">
-        
-
-        
-            <p>I&#39;m super Mario!</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
-
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank" href="https://github.com/xdyangchn">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-
-        <hr>
-    
-        
-  <h5>Recent posts
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/2019/05/22/IDEA-2019-激活码/">IDEA 2019 激活码</a>
-        </li>
-      
-        <li>
-          <a href="/2019/05/22/根据地址获取邮编工具类/">根据地址获取邮编工具类</a>
-        </li>
-      
-        <li>
-          <a href="/2019/05/22/spring-boot-报错-expected-to-be-of-type-xxService-but-was-actually-of-type-com-sun-proxy-Proxy48/">spring boot 报错 : expected to be of type &#39;xxService&#39; but was actually of type &#39;com.sun.proxy.$Proxy48</a>
-        </li>
-      
-        <li>
-          <a href="/2019/05/22/IntelliJ-IDEA-2018-3-启动黑屏无响应/">IntelliJ IDEA 2018.3 启动黑屏无响应</a>
-        </li>
-      
-        <li>
-          <a href="/2019/05/22/spring-data-jpa-报错：Parameter-value-element-null-did-not-match-expected-type-java-lang-String-n-a/">spring-data-jpa 报错：Parameter value element [null] did not match expected type [java.lang.String (n/a</a>
-        </li>
-      
-    </ul>
-  </div>
-</h5>
-        <hr>
-    
-        
-    <h5>Achives</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">5</span></li></ul>
-    </div>
-
-        <hr>
-    
-        <!-- Friends Blog -->
+</article>
 
 
-        <hr>
-    
-</div>
 
 
-        
-    </div>
-</div>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
@@ -580,7 +423,7 @@ google 一下 “ idea 启动黑屏” 并未找到解决方案，然后觉得�
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yoursite.com/index.html/js/jquery.tagcloud.js",function(){
+        async("http://yoursite.com/2019/05/22/spring-data-jpa-报错：Parameter-value-element-null-did-not-match-expected-type-java-lang-String-n-a/index.html/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
